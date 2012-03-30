@@ -1,0 +1,73 @@
+TheSaloonBot is a telnet bot that searches for specific keywords located
+in triggers.txt and replaces those words with the entered string.
+
+## Getting started
+To run TheSaloonBot you must first register an account with BYOND.com's servers.
+https://secure.byond.com/?page=Join
+
+Then, login to The Saloon (currently located at byond://99.235.169.66:6667
+Press F1 to configure your settings and set your telnet password.
+Press the 'Save Telnet?' checkbox and click the Save button to save your changes.
+The telnet command setting does *not* need to be set.
+Then you can exit The Saloon in the Dream Seeker client.
+
+Fill in the values at the top of Main.java with the corresponding information
+(key, password, and admin) and compile & run.
+
+If the information is correct, the telnet session should start within Java
+and automatically log you into The Saloon and authenticate itself.
+It will then begin listening for words in triggers.txt
+
+## Variables
+SaloonIP: The Saloon's IP it is currently being hosted on.
+SaloonPort: The Saloon's port it is currently being hosted on.
+REGEX_WORLD: Used to parse speech the users are saying.
+REGEX_PM: Used to parse private messages the users are sending.
+key: The BYOND account key that is used by the bot.
+password: The telnet password used by the key.
+admin: The administrator account that is allowed to execute commands through the bot.
+
+## Manual control
+The bot may be manually sent commands to execute through the use of private messages.
+In order for the commands to be accepted, the user's key must be stored within the admin variable.
+
+For example, to have the bot say Hello everyone! even when unprompted by a trigger, you must PM the bot the following:
+	>say Hello everyone!
+Would result in the output of:
+	TheSaloonBot: Hello everyone!
+
+The available commands for telnet users are as follows:
+    say, emote
+
+## Triggers.txt
+This file is loaded and used for the find / replace of the chat.
+If a user says a specific string on the left, the string on the right will be echoed through the bot.
+
+The syntax for triggers.txt is as follows:
+	[word to search for];[command to send]
+
+For example, every time a player said the word no, we want to have the bot say Yes!
+	no;say Yes!
+Would result in the output of:
+	TheSaloonBot: Yes!
+
+You may also include default replacement strings within curly brackets { }
+	no;say {YesString}
+Would result in the output of:
+	TheSaloonBot: Yes yes yes!
+
+There are several builtin replacement strings such as {UserSpeaking}
+    hi;say Hello {UserSpeaking}!
+Would result in the output of:
+	TheSaloonBot: Hello Mikau!
+
+## Replacements.txt
+This file is loaded and used for replacements of strings found in triggers.txt
+This was created for use if I wanted to do a batch 'find' and didn't want to type up a specific response each time.
+(For example, curse words.)
+
+The syntax for replacements.txt is the same as triggers.txt
+	[string to find];[string to replace]
+
+For example, in the above example in Triggers.txt.
+	{YesString};Yes yes yes!

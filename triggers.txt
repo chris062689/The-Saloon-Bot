@@ -1,0 +1,3 @@
+hi thesaloonseal;say {Hello}!
+bot;say I am a bot.
+the game;say I lost the game!
