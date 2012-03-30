@@ -1,5 +1,13 @@
-TheSaloonBot is a telnet bot that searches for specific keywords located
-in triggers.txt and replaces those words with the entered string.
+TheSaloonBot is a telnet bot that searches for specific keywords and 
+responds to them while connected through telnet in a chatroom.
+
+This bot only works with The Saloon.  http://www.byond.com/games/Mikau.Saloon
+Requires registration on BYOND.	      https://secure.byond.com/?page=Join
+
+It can probably work with other telnet-based servers if the REGEX
+strings are changed.
+
+View the Getting started section for more information.
 
 ## Getting started
 To run TheSaloonBot you must first register an account with BYOND.com's servers.

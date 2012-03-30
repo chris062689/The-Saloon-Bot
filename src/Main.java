@@ -11,8 +11,17 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-	// The Saloon bot currently only works with The Saloon located on BYOND.  (http://www.byond.com/games/Mikau/Saloon)
-	// This can probably be forked and used elsewhere as long as the REGEX strings are reformatted.
+	/**
+	 * TheSaloonBot is a telnet bot that searches for specific keywords located
+	 * in triggers.txt and replaces those words with the entered string.
+	 * 
+	 * 
+	 * Variables that must be set:
+	 * 
+	 * @key		    The BYOND account key that will be automatically connecting and parsing.
+	 * @password	The telnet password associated with that BYOND key.
+	 * @admin       The admin key allowed to manually send commands.
+	 */
 	
 	private final static String SaloonIP = "99.235.169.66";		// server IP to look for when connecting to The Saloon.
 	private final static int SaloonPort = 6667;
