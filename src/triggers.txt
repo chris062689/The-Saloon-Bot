@@ -1,3 +1,4 @@
-hi thesaloonseal;say {Hello}!
+hi {BotName};say {Hello}!
 bot;say I am a bot.
 the game;say I lost the game!
+whoami;say I am {BotName}!
