@@ -49,7 +49,7 @@ public class Main {
     	for (String[] row : Replacements) {
     		String ReplacementFind = row[0];
         	if(ToParse.contains(ReplacementFind)) {
-        		OutputParse = OutputParse.replace(ReplacementFind.toLowerCase(), row[1]);
+        		OutputParse = OutputParse.replace(ReplacementFind, row[1]);
         	}
     	}
 		
