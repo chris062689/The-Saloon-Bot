@@ -1,2 +1,0 @@
-{NoCursing};{UserSpeaking}, do not curse!
-{Hello};Hi {UserSpeaking}!
