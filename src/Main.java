@@ -96,15 +96,15 @@ public class Main {
 	}
 	
 	private static String TypeOfMessage(String RawLine) {
-        Pattern Patterns1 = Pattern.compile(REGEX_WORLD);
-        Matcher Matches1 = Patterns1.matcher(RawLine);
-        if(Matches1.matches()) {return "SAY";}
-
-        Pattern Patterns2 = Pattern.compile(REGEX_PM);
-        Matcher Matches2 = Patterns2.matcher(RawLine);
-        if(Matches2.matches()) {return "PM";}
-        
-        return "UNKNOWN";
+	        Pattern Patterns1 = Pattern.compile(REGEX_WORLD);
+	        Matcher Matches1 = Patterns1.matcher(RawLine);
+	        if(Matches1.matches()) {return "SAY";}
+	
+	        Pattern Patterns2 = Pattern.compile(REGEX_PM);
+	        Matcher Matches2 = Patterns2.matcher(RawLine);
+	        if(Matches2.matches()) {return "PM";}
+	        
+	        return "UNKNOWN";
 	}
 	
 	
