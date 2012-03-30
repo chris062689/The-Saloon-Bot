@@ -32,9 +32,9 @@ public class Main {
 	private final static String REGEX_WORLD = ".+\\[1m\\] (\\[37;40m\\[j)?(\\[34m)?([^\\[]+)(.+): (\\[31m)?(.+)$";
 	private final static String REGEX_PM = ".+\\[1m\\] (\\[[0-9]{1}[0-9]{1}m)?([^\\[]+)(.+): (\\[[0-9]{1}[0-9]{1}m)?(.+)$";
 	
-	private final static String key = "thesaloonseal";          	// ckey to authenticate against (no spaces)
-	private final static String password = "digijager";      		// telnet password
-	private final static String admin = "audeuro";				// key to listen to for remote management.
+	private final static String key = "";          	// ckey to authenticate against (no spaces)
+	private final static String password = "";      		// telnet password
+	private final static String admin = "";				// key to listen to for remote management.
 	
 	private static ArrayList<String[]> Triggers = new ArrayList<String[]>();
 	private static ArrayList<String[]> Replacements = new ArrayList<String[]>();
